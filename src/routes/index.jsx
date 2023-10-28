@@ -3,11 +3,11 @@ import HomePage from "./HomePage.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 
 export default function appRouter() {
-    return createBrowserRouter([
-        {
-            path: "/",
-            element: <HomePage />,
-            errorElement: <ErrorPage />,
-        },
-    ]);
+  return createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+      errorElement: <ErrorPage />,
+    },
+  ]);
 }

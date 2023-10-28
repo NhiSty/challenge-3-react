@@ -1,4 +1,3 @@
-
 export default function toTranslate(message) {
-    return message;
+  return message;
 }
