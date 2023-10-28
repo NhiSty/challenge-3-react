@@ -1,6 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import { Stack, Typography } from "@mui/joy";
-import toTranslate from "../utils/translate.js";
+import toTranslate from "@/utils/translate.js";
 
 export default function ErrorPage() {
   const error = useRouteError();
