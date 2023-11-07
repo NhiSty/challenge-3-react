@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    image: node:latest
+    working_dir: /var/www/html/app/
+    ports:
+      - "3010:3000"
+    volumes:
+      - ./:/var/www/html/app
+    command: sh -c "npm i && npm run dev"
+    tty: true
