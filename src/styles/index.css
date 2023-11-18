@@ -1,0 +1,35 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./dropdown.css";
+
+html,
+body {
+  @apply antialiased bg-white text-black;
+}
+
+*:focus-visible {
+  @apply outline outline-2 outline-purple-500 outline-offset-2;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+* {
+  @apply outline-blue-500 outline-2 outline-offset-2;
+}
+
+@layer components {
+  .btn {
+    &-ghost {
+      @apply hover:text-purple-500;
+    }
+  }
+}
+
+@layer utilities {
+  .smooth-transition {
+    @apply transition-all duration-100 ease-in-out;
+  }
+}
