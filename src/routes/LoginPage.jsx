@@ -73,7 +73,6 @@ export default function LoginPage() {
             iconClassName={classNames({ "animate-spin": loading })}
           >
             {toTranslate("Se connecter")}
-            
           </Button>
         </div>
       </form>

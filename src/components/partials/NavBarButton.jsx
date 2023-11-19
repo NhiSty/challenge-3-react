@@ -17,9 +17,7 @@ export function NavBarButtons() {
       <div className="dropdown dropdown-end">
         <button type="button" role="menu" tabIndex={0}>
           <User aria-hidden="true" />
-          <span className="sr-only">
-            {toTranslate("Compte")}
-          </span>
+          <span className="sr-only">{toTranslate("Compte")}</span>
         </button>
 
         <ul role="menu" className="dropdown-content menu menu-md">
