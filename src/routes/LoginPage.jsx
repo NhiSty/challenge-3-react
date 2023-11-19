@@ -11,7 +11,6 @@ import "react-toastify/dist/ReactToastify.css";
 import toTranslate from "@/utils/translate.js";
 
 export default function LoginPage() {
-
   const navigate = useNavigate();
   const {
     handleSubmit,
@@ -32,10 +31,8 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-
       await login(data.email, data.password);
       navigate("/");
-
     } catch (error) {
       setLoading(false);
       console.log(error);
@@ -68,7 +65,6 @@ export default function LoginPage() {
         />
 
         <div className="flex flex-row justify-end gap-2 pt-2">
-
           <Button
             type="submit"
             className="btn btn-primary"
@@ -90,9 +86,7 @@ export default function LoginPage() {
         </p>
       </div>
 
-      <ToastContainer 
-        position="bottom-right" 
-      />
+      <ToastContainer position="bottom-right" />
     </div>
   );
 }

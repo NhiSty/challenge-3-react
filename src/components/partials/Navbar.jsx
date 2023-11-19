@@ -18,7 +18,7 @@ const links = [
 ];
 
 export function Navbar() {
-  const isConnected = localStorage.getItem('token');
+  const isConnected = localStorage.getItem("token");
 
   return (
     <nav className="sticky top-0 border-b border-purple-300 bg-purple-400">
@@ -40,21 +40,20 @@ export function Navbar() {
               tabIndex={0}
               className="dropdown-content menu menu-md"
             >
-              {links.map((link) => (
-                isConnected && (
-                <li role="menuitem" key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="hover:bg-primary-500 hover:text-text-100"
-                    exact-active-classname="text-primary"
-                  >
-                    {link.text}
-                  </Link>
-                </li>
-              
-                )))}
-
-
+              {links.map(
+                (link) =>
+                  isConnected && (
+                    <li role="menuitem" key={link.to}>
+                      <Link
+                        to={link.to}
+                        className="hover:bg-primary-500 hover:text-text-100"
+                        exact-active-classname="text-primary"
+                      >
+                        {link.text}
+                      </Link>
+                    </li>
+                  ),
+              )}
             </ul>
           </div>
         </div>
@@ -62,7 +61,7 @@ export function Navbar() {
         <div className="navbar-center lg:navbar-start gap-2">
           <Link className="lg:btn lg:btn-ghost">Rent-A-Dream</Link>
 
-          {isConnected && (
+          {isConnected &&
             links.map((link) => (
               <Link
                 className="hidden lg:btn lg:btn-ghost"
@@ -72,8 +71,7 @@ export function Navbar() {
               >
                 {link.text}
               </Link>
-            ))
-          )}
+            ))}
         </div>
 
         <div className="navbar-end lg:mr-2">

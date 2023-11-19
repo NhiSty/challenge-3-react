@@ -14,7 +14,7 @@ export default function ErrorPage() {
           <img
             src="/assets/error-illustration.svg"
             alt="Error"
-            className="w-1/2 mx-auto mb-4 animate-bounce" 
+            className="w-1/2 mx-auto mb-4 animate-bounce"
           />
           <p className="text-lg mb-4">
             {toTranslate("Désolé, une erreur inattendue s'est produite.")}
@@ -22,8 +22,7 @@ export default function ErrorPage() {
           <p className="text-lg mb-4">
             <i>{error.statusText || error.message}</i>
           </p>
-          <a href="/"
-            className="text-sm text-primary">
+          <a href="/" className="text-sm text-primary">
             {toTranslate("Revenir à l'accueil.")}
           </a>
         </div>

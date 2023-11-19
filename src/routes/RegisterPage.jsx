@@ -21,12 +21,12 @@ export default function RegisterPage() {
   } = useForm({
     mode: "all",
     defaultValues: {
-        email: "",
-        password: "",
-        username: "",
-        firstName: "",
-        lastName: "",
-        age: "",
+      email: "",
+      password: "",
+      username: "",
+      firstName: "",
+      lastName: "",
+      age: "",
     },
   });
 
@@ -40,7 +40,6 @@ export default function RegisterPage() {
       await register(data);
 
       navigate("/login");
-
     } catch (error) {
       setLoading(false);
       console.error(error);
@@ -60,7 +59,9 @@ export default function RegisterPage() {
           label="Email"
           icon={<UserPlus className="w-5 h-5" />}
           error={errors.email?.message}
-          {...registerForm("email", { required: "L'adresse e-mail est requise" })}
+          {...registerForm("email", {
+            required: "L'adresse e-mail est requise",
+          })}
         />
 
         <Input
@@ -69,7 +70,9 @@ export default function RegisterPage() {
           type="password"
           icon={<Lock className="w-5 h-5" />}
           error={errors.password?.message}
-          {...registerForm("password", { required: "Le mot de passe est requis" })}
+          {...registerForm("password", {
+            required: "Le mot de passe est requis",
+          })}
         />
 
         <Input
@@ -77,7 +80,9 @@ export default function RegisterPage() {
           label="Nom d'utilisateur"
           icon={<User className="w-5 h-5" />}
           error={errors.username?.message}
-          {...registerForm("username", { required: "Le nom d'utilisateur est requis" })}
+          {...registerForm("username", {
+            required: "Le nom d'utilisateur est requis",
+          })}
         />
 
         <Input

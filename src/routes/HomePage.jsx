@@ -9,7 +9,7 @@ export default function HomePage() {
         </h1>
         <p className="text-lg mb-4">
           {toTranslate(
-            "Vous n'avez personne avec qui partager vos passions et vos discussions ?"
+            "Vous n'avez personne avec qui partager vos passions et vos discussions ?",
           )}
         </p>
         <p className="text-lg mb-4">

@@ -6,25 +6,25 @@ import RegisterPage from "./routes/RegisterPage.jsx";
 import LoginPage from "./routes/LoginPage.jsx";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: "/",
-        element: <App />,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                path: "/",
-                element: <HomePage />
-            },
-            {
-                path: '/register',
-                element: <RegisterPage />,
-            },
-            {
-                path: '/login',
-                element: <LoginPage />
-            }
-        ]
-    }
-])
+        element: <HomePage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+    ],
+  },
+]);
 
-export default router
+export default router;

@@ -9,7 +9,6 @@ export async function login(email, password) {
 }
 
 export async function register(data) {
-
   const response = await apiClient.post("/users", {
     email: data.email,
     password: data.password,
@@ -18,5 +17,6 @@ export async function register(data) {
     lastName: data.lastName,
     age: data.age,
   });
-  
+
+  return response;
 }

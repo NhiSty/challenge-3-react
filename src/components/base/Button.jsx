@@ -12,7 +12,7 @@ export const Button = forwardRef(
       type = "button",
       ...props
     },
-    ref
+    ref,
   ) => {
     const classes = classNames(
       "px-4 py-2 rounded-lg motion-safe:transition-all duration-150",
@@ -29,21 +29,16 @@ export const Button = forwardRef(
       "bg-purple-500 hover:bg-purple-400 text-white",
       "outline-purple-500",
 
-      className
+      className,
     );
 
     return (
-      <button
-        ref={ref}
-        type={type}
-        {...props}
-        className={classes}
-      >
+      <button ref={ref} type={type} {...props} className={classes}>
         {Icon && <Icon className={classNames("w-6 h-6", iconClassName)} />}
         {children}
       </button>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";
