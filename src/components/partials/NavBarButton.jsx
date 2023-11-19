@@ -1,5 +1,6 @@
 import { LayoutDashboard, LogIn, LogOut, User, UserPlus } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import toTranslate from "@/utils/translate.js";
 
 export function NavBarButtons() {
   const navigate = useNavigate();
@@ -16,7 +17,9 @@ export function NavBarButtons() {
       <div className="dropdown dropdown-end">
         <button type="button" role="menu" tabIndex={0}>
           <User aria-hidden="true" />
-          <span className="sr-only">Account</span>
+          <span className="sr-only">
+            {toTranslate("Compte")}
+          </span>
         </button>
 
         <ul role="menu" className="dropdown-content menu menu-md">
@@ -25,7 +28,7 @@ export function NavBarButtons() {
               to="/account"
               className="hover:bg-primary hover:text-text-100"
             >
-              Account
+              {toTranslate("Compte")}
               <User aria-hidden="true" className="w-5 h-5 ml-auto" />
             </Link>
           </li>
@@ -35,7 +38,7 @@ export function NavBarButtons() {
               to="/dashboard"
               className="hover:bg-primary hover:text-text-100"
             >
-              Dashboard
+              {toTranslate("Dashboard")}
               <LayoutDashboard aria-hidden="true" className="w-5 h-5 ml-auto" />
             </Link>
           </li>
@@ -45,7 +48,7 @@ export function NavBarButtons() {
               onClick={handleLogout}
               className="hover:bg-primary hover:text-text-100"
             >
-              Log out
+              {toTranslate("Déconnexion")}
               <LogOut aria-hidden="true" className="w-5 h-5 ml-auto" />
             </button>
           </li>
@@ -59,13 +62,13 @@ export function NavBarButtons() {
       <div className="tooltip tooltip-bottom" data-tip="Log In">
         <Link to="/login" className="btn btn-ghost">
           <LogIn aria-hidden="true" />
-          <span className="sr-only">Log In</span>
+          <span className="sr-only">{toTranslate("Se connecter")}</span>
         </Link>
       </div>
       <div className="tooltip tooltip-bottom" data-tip="Register">
         <Link to="/register" className="btn btn-ghost">
           <UserPlus aria-hidden="true" />
-          <span className="sr-only">Register</span>
+          <span className="sr-only">{toTranslate("Se déconnecter")}</span>
         </Link>
       </div>
     </>

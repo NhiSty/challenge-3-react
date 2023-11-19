@@ -1,6 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import toTranslate from "@/utils/translate.js";
-import { Navbar } from "../components/partials/Navbar";
+import { Navbar } from "@components/partials/Navbar";
 
 export default function ErrorPage() {
   const error = useRouteError();

@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@components/form/Input";
 import { Loader2, Lock, LogIn, User } from "lucide-react";
-import { Button } from "../components/base/Button";
+import { Button } from "@components/base/Button";
 import classNames from "classnames";
-import { login } from "../api/auth";
+import { login } from "@/api/auth";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -72,7 +72,8 @@ export default function LoginPage() {
             icon={loading ? Loader2 : LogIn}
             iconClassName={classNames({ "animate-spin": loading })}
           >
-            Let me in !!!
+            {toTranslate("Se connecter")}
+            
           </Button>
         </div>
       </form>
@@ -81,7 +82,7 @@ export default function LoginPage() {
         <p className="mt-3 font-bold text-center">
           {toTranslate("Don't have an account ? ")}
           <a className="text-primary" href="/register">
-            Register
+            {toTranslate("S'inscrire")}
           </a>
         </p>
       </div>

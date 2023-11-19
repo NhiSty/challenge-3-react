@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@components/form/Input";
 import { Loader2, Lock, User, UserPlus } from "lucide-react";
-import { Button } from "../components/base/Button";
+import { Button } from "@components/base/Button";
 import classNames from "classnames";
-import { register } from "../api/auth";
+import { register } from "@/api/auth";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,7 +36,6 @@ export default function RegisterPage() {
     setLoading(true);
 
     try {
-      // Appeler votre API pour l'inscription
       await register(data);
 
       navigate("/login");
@@ -127,7 +126,7 @@ export default function RegisterPage() {
         <p className="mt-3 font-bold text-center">
           Vous avez déjà un compte ?{" "}
           <a className="text-primary" href="/login">
-            Connexion
+            {toTranslate("Connexion")}
           </a>
         </p>
       </div>
