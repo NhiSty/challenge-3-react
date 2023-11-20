@@ -7,7 +7,6 @@ import LoginPage from "@routes/LoginPage.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
