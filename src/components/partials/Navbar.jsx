@@ -1,6 +1,6 @@
 import { MenuIcon } from "lucide-react";
 import { Link } from "react-router-dom";
-import { NavBarButtons } from "./NavBarButton";
+import { NavBarButtons } from "@components/partials/NavBarButton.jsx";
 
 const links = [
   {

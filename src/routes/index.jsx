@@ -1,14 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./routes/HomePage.jsx";
-import ErrorPage from "./routes/ErrorPage.jsx";
-import App from "./App.jsx";
-import RegisterPage from "./routes/RegisterPage.jsx";
-import LoginPage from "./routes/LoginPage.jsx";
+import HomePage from "@routes/HomePage.jsx";
+import ErrorPage from "@routes/ErrorPage.jsx";
+import Layout from "@components/Layout.jsx";
+import RegisterPage from "@routes/RegisterPage.jsx";
+import LoginPage from "@routes/LoginPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {

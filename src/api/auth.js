@@ -5,6 +5,8 @@ export async function login(email, password) {
     email,
     password,
   });
+
+  // utilisation du hook custom ici
   localStorage.setItem("token", response.data.token);
 }
 

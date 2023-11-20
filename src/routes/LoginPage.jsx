@@ -6,7 +6,7 @@ import { Button } from "@components/base/Button";
 import classNames from "classnames";
 import { login } from "@/api/auth";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import toTranslate from "@/utils/translate.js";
 
@@ -85,8 +85,6 @@ export default function LoginPage() {
           </a>
         </p>
       </div>
-
-      <ToastContainer position="bottom-right" />
     </div>
   );
 }
