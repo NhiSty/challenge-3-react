@@ -59,7 +59,9 @@ export function Navbar() {
         </div>
 
         <div className="navbar-center lg:navbar-start gap-2">
-          <Link className="lg:btn lg:btn-ghost" to={'/'}>Rent-A-Dream</Link>
+          <Link className="lg:btn lg:btn-ghost" to={"/"}>
+            Rent-A-Dream
+          </Link>
 
           {isConnected &&
             links.map((link) => (
