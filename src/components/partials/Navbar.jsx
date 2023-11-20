@@ -21,7 +21,7 @@ export function Navbar() {
   const isConnected = localStorage.getItem("token");
 
   return (
-    <nav className="sticky top-0 border-b border-purple-300 bg-purple-400">
+    <nav className="sticky top-0 border-b border-purple-300 bg-purple-400/[0.55] z-10 backdrop-blur-sm">
       <div className="navbar container mx-auto py-3">
         <div className="navbar-start lg:hidden">
           <div className="dropdown">
@@ -59,7 +59,7 @@ export function Navbar() {
         </div>
 
         <div className="navbar-center lg:navbar-start gap-2">
-          <Link className="lg:btn lg:btn-ghost">Rent-A-Dream</Link>
+          <Link className="lg:btn lg:btn-ghost" to={'/'}>Rent-A-Dream</Link>
 
           {isConnected &&
             links.map((link) => (
