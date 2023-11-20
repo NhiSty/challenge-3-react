@@ -1,0 +1,9 @@
+.dropdown {
+  button[role="menu"] {
+    @apply btn btn-ghost smooth-transition;
+  }
+
+  .dropdown-content {
+    @apply mt-3 p-2 shadow rounded-box w-52 bg-white top-14 text-gray-900;
+  }
+}
