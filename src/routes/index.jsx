@@ -1,29 +1,68 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "@routes/HomePage.jsx";
 import ErrorPage from "@routes/ErrorPage.jsx";
-import Layout from "@components/Layout.jsx";
+import Layout from "@components/partials/Layout.jsx";
 import RegisterPage from "@routes/RegisterPage.jsx";
 import LoginPage from "@routes/LoginPage.jsx";
+import ProtectedRoute from "@components/ProtectedRoute";
+import DashboardPage from "@routes/DashboardPage";
+import BackOfficeLayout from "@components/backOffice/BackOfficeLayout";
+import CompanyPage from "@routes/CompanyPage";
+import EmployeesPage from "@routes/EmployeesPage";
+import ServicesPage from "@routes/ServicesPage";
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <HomePage />,
       },
       {
-        path: "/register",
+        path: "register",
         element: <RegisterPage />,
       },
       {
-        path: "/login",
+        path: "login",
         element: <LoginPage />,
       },
     ],
   },
+  {
+    path: "/manager",
+    element: <BackOfficeLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "dashboard",
+        element: <ProtectedRoute roleAllowed={['manager']}>
+          <DashboardPage />
+        </ProtectedRoute>,
+      },
+      {
+        path: "company",
+        element: <ProtectedRoute roleAllowed={['manager']}>
+          <CompanyPage />
+        </ProtectedRoute>,
+      },
+      {
+        path: "employees",
+        element: <ProtectedRoute roleAllowed={['manager']}>
+          <EmployeesPage />
+        </ProtectedRoute>,
+      },
+      {
+        path: "services",
+        element: <ProtectedRoute roleAllowed={['manager']}>
+          <ServicesPage />
+        </ProtectedRoute>,
+      },
+
+    ],
+  }
 ]);
 
 export default router;
