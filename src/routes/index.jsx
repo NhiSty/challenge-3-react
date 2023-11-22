@@ -38,31 +38,38 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <ProtectedRoute roleAllowed={['manager']}>
-          <DashboardPage />
-        </ProtectedRoute>,
+        element: (
+          <ProtectedRoute roleAllowed={["manager"]}>
+            <DashboardPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "company",
-        element: <ProtectedRoute roleAllowed={['manager']}>
-          <CompanyPage />
-        </ProtectedRoute>,
+        element: (
+          <ProtectedRoute roleAllowed={["manager"]}>
+            <CompanyPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "employees",
-        element: <ProtectedRoute roleAllowed={['manager']}>
-          <EmployeesPage />
-        </ProtectedRoute>,
+        element: (
+          <ProtectedRoute roleAllowed={["manager"]}>
+            <EmployeesPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "services",
-        element: <ProtectedRoute roleAllowed={['manager']}>
-          <ServicesPage />
-        </ProtectedRoute>,
+        element: (
+          <ProtectedRoute roleAllowed={["manager"]}>
+            <ServicesPage />
+          </ProtectedRoute>
+        ),
       },
-
     ],
-  }
+  },
 ]);
 
 export default router;

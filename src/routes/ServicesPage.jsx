@@ -1,9 +1,4 @@
-
 export default function ServicesPage() {
-    // todo: implement this page
-    return (
-        <div>
-
-        </div>
-    )
+  // todo: implement this page
+  return <div></div>;
 }
