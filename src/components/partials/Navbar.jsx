@@ -22,7 +22,7 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 border-b border-purple-300 bg-purple-400/[0.55] z-10 backdrop-blur-sm">
-      <div className="navbar container mx-auto py-3">
+      <div className="navbar py-3">
         <div className="navbar-start lg:hidden">
           <div className="dropdown">
             <button
