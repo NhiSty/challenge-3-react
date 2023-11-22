@@ -7,7 +7,7 @@ function BackOfficeLayout() {
   return (
     <Sidebar>
       <BackOfficeNavbar />
-      <main className={"px-4 py-4"}>
+      <main className={"px-8 py-8"}>
         <Outlet />
       </main>
     </Sidebar>
