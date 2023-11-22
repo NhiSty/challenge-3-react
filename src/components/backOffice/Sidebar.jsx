@@ -1,7 +1,8 @@
 import { LayoutDashboard, Building2, Users, BookOpenText } from "lucide-react";
 import { Link } from "react-router-dom";
 import toTranslate from "@/utils/translate";
-// eslint-disable-next-line react/prop-types
+import PropTypes from "prop-types";
+
 export default function Sidebar({ children }) {
   return (
     <>
@@ -59,3 +60,7 @@ export default function Sidebar({ children }) {
     </>
   );
 }
+
+Sidebar.propTypes = {
+  children: PropTypes.node.isRequired,
+};
