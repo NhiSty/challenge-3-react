@@ -42,7 +42,7 @@ function Button({
 
         effectsClasses,
 
-        classNames
+        classNames,
       )}
       {...props}
     >
@@ -57,7 +57,7 @@ function Button({
           "before:content-[''] before:absolute before:top-0 before:left-0",
           "before:w-1/2 before:h-full before:bg-gradient-to-l before:from-[rgba(255,255,255,0.15)] before:to-transparent",
           "before:skew-x-[45deg] before:translate-x-0 before:duration-500",
-          "group-hover:before:translate-x-[200%]"
+          "group-hover:before:translate-x-[200%]",
         )}
       >
         {children}

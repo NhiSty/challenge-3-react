@@ -30,7 +30,7 @@ function Modal({
       event.preventDefault();
       onClose?.("cancel");
     },
-    [onClose]
+    [onClose],
   );
 
   const onSubmit = useCallback(
@@ -38,7 +38,7 @@ function Modal({
       event.preventDefault();
       onClose?.("submit");
     },
-    [onClose]
+    [onClose],
   );
 
   return (
@@ -54,7 +54,7 @@ function Modal({
 
         "bg-glass bg-white/5 text-white rounded-2xl border border-white border-opacity-20 shadow-lg",
         "transition-all transform-gpu relative",
-        className
+        className,
       )}
     >
       <form method="dialog" onSubmit={onSubmit} onReset={onCancel}>
@@ -76,7 +76,7 @@ function Modal({
 
         <footer
           className={cn(
-            "border-t border-white border-opacity-20 backdrop-blur-md rounded-b-2xl p-4"
+            "border-t border-white border-opacity-20 backdrop-blur-md rounded-b-2xl p-4",
           )}
         >
           <menu className="flex flex-row-reverse gap-4">

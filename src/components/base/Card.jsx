@@ -8,7 +8,7 @@ function Card({ children, classNames }) {
         "bg-glass bg-white/5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-8 shadow-lg",
         "transition-all transform-gpu relative",
         "hover:shadow-xl hover:scale-[102%]",
-        classNames
+        classNames,
       )}
     >
       {children}
