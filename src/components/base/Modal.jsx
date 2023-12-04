@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
-import { Button } from "@components/base/Button";
+import  Button  from "@components/base/Button";
 import { useCallback } from "react";
 
 function Modal({
