@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@components/form/Input";
 import { Loader2, Lock, LogIn, User } from "lucide-react";
-import Button  from "@components/base/Button";
+import Button from "@components/base/Button";
 import classNames from "classnames";
 import { login } from "@/api/auth";
 import { useNavigate } from "react-router-dom";
