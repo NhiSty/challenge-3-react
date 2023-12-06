@@ -1,24 +1,57 @@
-import { apiClient } from ".";
-
 export async function login(email, password) {
-  const response = await apiClient.post("/api/login", {
-    email,
-    password,
-  });
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        password
+      }),
+    });
 
-  // utilisation du hook custom ici
-  localStorage.setItem("token", response.data.token);
+    if (!response.ok) {
+      const errorMessage = await response.text();
+      throw new Error(errorMessage);
+    }
+    const responseData = await response.json();
+
+    console.log(responseData);
+    // utilisation du hook custom ici
+    localStorage.setItem("token", responseData.token);
+
+  } catch (error) {
+    throw new Error(`Erreur lors de la connexion : ${error.message}`);
+  }
 }
 
 export async function register(data) {
-  const response = await apiClient.post("/users", {
-    email: data.email,
-    password: data.password,
-    username: data.username,
-    firstName: data.firstName,
-    lastName: data.lastName,
-    age: data.age,
-  });
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/users`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/ld+json',
+      },
+      body: JSON.stringify({
+        email: data.email,
+        password: data.password,
+        plainPassword: data.password,
+        username: data.username,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        age: data.age,
+      }),
+    });
 
-  return response;
+    if (!response.ok) {
+      const errorMessage = await response.text();
+      throw new Error(errorMessage);
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    throw new Error(`Erreur lors de la création : ${error.message}`);
+  }
 }
